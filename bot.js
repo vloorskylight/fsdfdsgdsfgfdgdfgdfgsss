@@ -49,34 +49,14 @@ client.on('ready', () => {
             }
 });
 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '482819280883286037').setName("We");
-client.channels.find('id', '482819280883286037').setName("Wel");
-client.channels.find('id', '482819280883286037').setName("Welc");
-client.channels.find('id', '482819280883286037').setName("Welco");
-client.channels.find('id', '482819280883286037').setName("Welcom");
-client.channels.find('id', '482819280883286037').setName("Welcome");
-client.channels.find('id', '482819280883286037').setName("Welcome T");
-client.channels.find('id', '482819280883286037').setName("Welcome To");
-client.channels.find('id', '482819280883286037').setName("Welcome To S");
-client.channels.find('id', '482819280883286037').setName("Welcome To SK");
-client.channels.find('id', '482819280883286037').setName("Welcome To SKY");
-client.channels.find('id', '482819280883286037').setName("Welcome To SKY L");
-client.channels.find('id', '482819280883286037').setName("Welcome To SKY LI");
-client.channels.find('id', '482819280883286037').setName("Welcome To SKY LIG");
-client.channels.find('id', '482819280883286037').setName("Welcome To SKY LIGH");
-client.channels.find('id', '482819280883286037').setName("Welcome To SKY LIGHT ✨");
-  }, 3000);
-});
 
 ////////////////////////////////////////////////////////////////////////////////////////
 client.on('voiceStateUpdate', (old, now) => {
-  const channel = client.channels.get('482819420071395328');
+  const channel = client.channels.get('486288199925104650');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`Voice Online: ${currentSize}`);
-  if (currentSize !== size) channel.setName(`Voice Online: ${currentSize}`);
+  if (!size) return channel.setName(`SL Voice: ${currentSize}`);
+  if (currentSize !== size) channel.setName(`SL Voice: ${currentSize}`);
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////
